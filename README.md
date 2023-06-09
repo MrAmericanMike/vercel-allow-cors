@@ -1,0 +1,1 @@
+# Vercel Allow Cors
