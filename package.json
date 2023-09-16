@@ -1,0 +1,50 @@
+{
+	"name": "vercel-allow-cors",
+	"version": "0.0.1",
+	"description": "Vercel Allow Cors",
+	"main": "lib/vercel-allow-cors.mjs",
+	"types": "lib/main.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/vercel-allow-cors.js",
+			"import": "./dist/vercel-allow-cors.mjs"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"vite-build": "vite build",
+		"prepublishOnly": "pnpm run build"
+	},
+	"files": [
+		"lib/**/*",
+		"package.json",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrAmericanMike/vercel-allow-cors.git"
+	},
+	"keywords": [
+		"vercel-allow-cors",
+		"vercel",
+		"allow",
+		"cors",
+		"serverless",
+		"functions",
+		"cross",
+		"origin"
+	],
+	"author": "MrAmericanMike",
+	"license": "MIT",
+	"homepage": "https://github.com/MrAmericanMike/vercel-allow-cors/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/MrAmericanMike/vercel-allow-cors/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^20.6.0",
+		"@vercel/node": "^3.0.5",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9",
+		"vite-plugin-dts": "^3.5.3"
+	}
+}
