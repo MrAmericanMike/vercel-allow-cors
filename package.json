@@ -2,17 +2,19 @@
 	"name": "vercel-allow-cors",
 	"version": "0.0.1",
 	"description": "Vercel Allow Cors",
-	"main": "lib/vercel-allow-cors.mjs",
+	"type": "module",
+	"main": "lib/vercel-allow-cors.cjs",
+	"module": "lib/vercel-allow-cors.js",
 	"types": "lib/main.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/vercel-allow-cors.js",
-			"import": "./dist/vercel-allow-cors.mjs"
+			"types": "./lib/main.d.ts",
+			"require": "./lib/vercel-allow-cors.cjs",
+			"import": "./lib/vercel-allow-cors.js"
 		}
 	},
 	"scripts": {
-		"build": "tsc",
-		"vite-build": "vite build",
+		"build": "vite build",
 		"prepublishOnly": "pnpm run build"
 	},
 	"files": [
@@ -41,10 +43,10 @@
 		"url": "https://github.com/MrAmericanMike/vercel-allow-cors/issues"
 	},
 	"devDependencies": {
-		"@types/node": "22.5.5",
-		"@vercel/node": "3.2.14",
-		"typescript": "5.6.2",
-		"vite": "5.4.6",
-		"vite-plugin-dts": "4.2.1"
+		"@types/node": "22.10.2",
+		"@vercel/node": "5.0.0",
+		"typescript": "5.7.2",
+		"vite": "6.0.3",
+		"vite-plugin-dts": "4.3.0"
 	}
 }
